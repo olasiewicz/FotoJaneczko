@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_strona_glowna"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_strona_glowna"/>
+    
+    <item
+        android:id="@+id/action_galeria"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_galeria"/>
+    
+    <item
+        android:id="@+id/action_oferta"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_oferta"/>    
+    
+
+</menu>

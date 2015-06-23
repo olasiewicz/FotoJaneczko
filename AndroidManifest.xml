@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wojtek.fotojaneczko"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivityFJ"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ceremonia"
+            android:label="CEREMONIA"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Plener"
+            android:label="PLENER"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Niemowleta"
+            android:label="NIEMOWLĘTA"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Dzieci"
+            android:label="DZIECI"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Ciaza"
+            android:label="9 MIESIĘCY"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Portret"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="PORTRET" >
+        </activity>
+        <activity
+            android:name=".GaleriaMenu"
+            android:label="GALERIA"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.wojtek.fotojaneczko.Oferta"
+            android:label="OFERTA"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".Kontakt"
+            android:label="KONTAKT"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

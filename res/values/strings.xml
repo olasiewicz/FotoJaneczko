@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Foto Janeczko</string>
+    <string name="action_oferta">Oferta</string>
+    <string name="action_galeria">Galeria</string>
+    <string name="action_kontakt">Kontakt</string>
+    <string name="action_strona_glowna">Strona główna</string>
+    <string name="action_powrot">Powrót</string>
+    <string name="mainActivity_dialogTitle">Wyjście</string>
+    <string name="mainActivity_dialogMessage">Czy na pewno zamknąć aplikację ?</string>
+    <string name="dialogZamknij">Zamknij</string>
+    <string name="dialogAnuluj">Anuluj</string>
+     
+     
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:id="@+id/scroll_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.ortiz.touch.TouchImageView
+            android:id="@+id/imageViewOferta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/oferta" />
+    </ScrollView>
+    
+    
+
+</LinearLayout>
