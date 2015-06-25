@@ -29,27 +29,27 @@
         <activity
             android:name=".Ceremonia"
             android:label="CEREMONIA"
-            android:screenOrientation="landscape" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name=".Plener"
             android:label="PLENER"
-            android:screenOrientation="landscape" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name=".Niemowleta"
             android:label="NIEMOWLĘTA"
-            android:screenOrientation="landscape" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name=".Dzieci"
             android:label="DZIECI"
-            android:screenOrientation="landscape" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name=".Ciaza"
             android:label="9 MIESIĘCY"
-            android:screenOrientation="landscape" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name=".Portret"
