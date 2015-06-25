@@ -1,54 +1,85 @@
 package com.wojtek.fotojaneczko;
-import java.text.DecimalFormat;
 
 import android.app.Activity;
-import android.graphics.PointF;
-import android.graphics.RectF;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
 
-import com.example.touch.R;
-import com.wojtek.fotojaneczko.TouchImageView.OnTouchImageViewListener;
-
-
-public class Oferta extends Activity {
+public class Oferta extends Activity{
 	
-	private TouchImageView image;
-	private TextView scrollPositionTextView;
-	private TextView zoomedRectTextView;
-	private TextView currentZoomTextView;
-	private DecimalFormat df;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_single_touchimageview);
-		//
-		// DecimalFormat rounds to 2 decimal places.
-		//
-		df = new DecimalFormat("#.##");
-		scrollPositionTextView = (TextView) findViewById(R.id.scroll_position);
-		zoomedRectTextView = (TextView) findViewById(R.id.zoomed_rect);
-		currentZoomTextView = (TextView) findViewById(R.id.current_zoom);
-		image = (TouchImageView) findViewById(R.id.img);
 		
-		//
-		// Set the OnTouchImageViewListener which updates edit texts
-		// with zoom and scroll diagnostics.
-		//
-		image.setOnTouchImageViewListener(new OnTouchImageViewListener() {
-			
-			@Override
-			public void onMove() {
-				PointF point = image.getScrollPosition();
-				RectF rect = image.getZoomedRect();
-				float currentZoom = image.getCurrentZoom();
-				boolean isZoomed = image.isZoomed();
-				scrollPositionTextView.setText("x: " + df.format(point.x) + " y: " + df.format(point.y));
-				zoomedRectTextView.setText("left: " + df.format(rect.left) + " top: " + df.format(rect.top)
-						+ "\nright: " + df.format(rect.right) + " bottom: " + df.format(rect.bottom));
-				currentZoomTextView.setText("getCurrentZoom(): " + currentZoom + " isZoomed(): " + isZoomed);
-			}
-		});
+		setContentView(R.layout.oferta);
+		
+		
+	
+	
 	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu_oferta, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+
+		switch (id) {
+		case R.id.action_strona_glowna:
+			Intent stronaGlownaIntent = new Intent(Oferta.this, MainActivityFJ.class);
+			startActivity(stronaGlownaIntent);
+			this.finish();
+			break;
+
+		case R.id.action_galeria:
+			Intent galeriaIntent = new Intent(Oferta.this, GaleriaMenu.class);
+			startActivity(galeriaIntent);
+			this.finish();
+			break;
+
+		case R.id.action_kontakt:
+			Intent ofertaIntent = new Intent(Oferta.this, Kontakt.class);
+			startActivity(ofertaIntent);
+			this.finish();
+			break;
+
+		default:
+			break;
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onBackPressed() {
+
+		AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+		saveDialog.setTitle(R.string.mainActivity_dialogTitle);
+		saveDialog.setMessage(R.string.mainActivity_dialogMessage);
+		saveDialog.setPositiveButton(R.string.dialogZamknij,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+
+						System.exit(0);
+					}
+				});
+		saveDialog.setNegativeButton(R.string.dialogAnuluj,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.cancel();
+					}
+				});
+		
+		saveDialog.show();
+	}
+
 }
